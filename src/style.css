@@ -741,3 +741,96 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+
+
+
+
+.contact-container {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 5%;
+  margin-bottom: 7%;
+  padding: 20px;
+  color: #f0f0f0;
+  margin-left: 30%;
+}
+
+.contact-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #e1e1e1; 
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #ddd; 
+}
+
+.contact-form .form-control {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #444c56; 
+  color: #f0f0f0;
+  border: 1px solid #555; 
+  border-radius: 5px;
+}
+
+.contact-form .form-control:focus {
+  border-color: #a24dd386; 
+  outline: none;
+  background-color: #3b434c; 
+}
+
+.contact-form .error {
+  color: #ff4d4d; 
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.contact-form .submit-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #a24dd386; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-button:hover {
+  background-color: #a24dd386;
+}
+
+.success-message {
+  color: #a24dd386; 
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form .submit-button:disabled {
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-container {
+    padding: 15px;
+  }
+
+  .contact-form .form-control {
+    padding: 10px;
+  }
+
+  .contact-form .submit-button {
+    padding: 10px;
+  }
+}
