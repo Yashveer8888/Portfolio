@@ -745,61 +745,80 @@ button:focus {
 
 
 
+/* Contact section styling */
+.contact {
+  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 91vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
 
+/* Container for form */
 .contact-container {
   width: 100%;
   max-width: 600px;
-  margin-top: 5%;
-  margin-bottom: 7%;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 10px;
   color: #f0f0f0;
-  margin-left: 30%;
 }
 
+/* Heading */
 .contact-container h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #e1e1e1; 
+  color: #e1e1e1;
+  text-align: center;
 }
 
+/* Form groups */
 .contact-form .form-group {
   margin-bottom: 15px;
 }
 
+/* Labels */
 .contact-form label {
   display: block;
   font-size: 1rem;
   margin-bottom: 5px;
-  color: #ddd; 
+  color: #ddd;
 }
 
+/* Input & Textarea */
 .contact-form .form-control {
   width: 100%;
   padding: 12px;
   font-size: 1rem;
-  background-color: #444c56; 
+  background-color: #444c56;
   color: #f0f0f0;
-  border: 1px solid #555; 
+  border: 1px solid #555;
   border-radius: 5px;
 }
 
+/* Focus effect */
 .contact-form .form-control:focus {
-  border-color: #a24dd386; 
+  border-color: #a24dd386;
   outline: none;
-  background-color: #3b434c; 
+  background-color: #3b434c;
 }
 
+/* Error messages */
 .contact-form .error {
-  color: #ff4d4d; 
+  color: #ff4d4d;
   font-size: 0.9rem;
   margin-top: 5px;
 }
 
+/* Submit button */
 .contact-form .submit-button {
   width: 100%;
   padding: 12px;
   font-size: 1rem;
-  background-color: #a24dd386; 
+  background-color: #a24dd386;
   color: white;
   border: none;
   border-radius: 5px;
@@ -808,28 +827,29 @@ button:focus {
 }
 
 .contact-form .submit-button:hover {
-  background-color: #a24dd386;
-}
-
-.success-message {
-  color: #a24dd386; 
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  background-color: #bc52fa86;
 }
 
 .contact-form .submit-button:disabled {
   cursor: not-allowed;
 }
 
-@media screen and (max-width: 600px) {
+/* Success message */
+.success-message {
+  color: #46e172;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
   .contact-container {
-    padding: 15px;
+    margin: 0 auto;
+    padding: 20px;
   }
 
-  .contact-form .form-control {
-    padding: 10px;
-  }
-
+  .contact-form .form-control,
   .contact-form .submit-button {
     padding: 10px;
   }

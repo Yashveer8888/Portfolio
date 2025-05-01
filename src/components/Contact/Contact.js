@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -36,10 +35,10 @@ const Contact = () => {
 
     emailjs
       .send(
-        process.env.YOUR_SERVICE_ID,     
-        process.env.YOUR_TEMPLATE_ID,    
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         formData,
-        process.env.YOUR_PUBLIC_KEY, 
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
       )
       .then(
         (response) => {
@@ -56,61 +55,63 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-container">
-      <h2>Contact Me</h2>
+    <div className="contact">
+      <div className="contact-container">
+        <h2>Contact Me</h2>
 
-      {isSubmitted && (
-        <div className="success-message">
-          Thank you! Your message has been sent.
-        </div>
-      )}
+        {isSubmitted && (
+          <div className="success-message">
+            Thank you! Your message has been sent.
+          </div>
+        )}
 
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
-            className="form-control"
-            placeholder="Your Name"
-          />
-          {formErrors.name && <span className="error">{formErrors.name}</span>}
-        </div>
+        <form onSubmit={handleSubmit} className="contact-form">
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              className="form-control"
+              placeholder="Your Name"
+            />
+            {formErrors.name && <span className="error">{formErrors.name}</span>}
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            className="form-control"
-            placeholder="Your Email"
-          />
-          {formErrors.email && <span className="error">{formErrors.email}</span>}
-        </div>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              className="form-control"
+              placeholder="Your Email"
+            />
+            {formErrors.email && <span className="error">{formErrors.email}</span>}
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleInputChange}
-            className="form-control"
-            placeholder="Your Message"
-          ></textarea>
-          {formErrors.message && <span className="error">{formErrors.message}</span>}
-        </div>
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
+              className="form-control"
+              placeholder="Your Message"
+            ></textarea>
+            {formErrors.message && <span className="error">{formErrors.message}</span>}
+          </div>
 
-        <button type="submit" className="submit-button">
-          Submit
-        </button>
-      </form>
+          <button type="submit" className="submit-button">
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
