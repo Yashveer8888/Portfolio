@@ -112,7 +112,7 @@ function Home2() {
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                leetcode
+                LC
                 </a>
               </li>
             </ul>
